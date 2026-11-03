@@ -1,5 +1,3 @@
-// Part A: Employee Task Management using the built-in HTTP and FS modules
-// (Express.js is NOT used in this file)
 
 import http from 'http';
 import fs from 'fs';
@@ -8,18 +6,15 @@ import { fileURLToPath } from 'url';
 
 const PORT = 3000;
 
-// __dirname is not available in ES modules, so we create it manually
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Array used instead of a database
 const tasks = [
   { id: 1, taskName: 'Develop Login Page', assignedTo: 'Rahul Sharma', status: 'Pending' },
   { id: 2, taskName: 'Design Database Schema', assignedTo: 'Priya Singh', status: 'In Progress' },
   { id: 3, taskName: 'Write Unit Tests', assignedTo: 'Amit Kumar', status: 'Completed' }
 ];
 
-// Helper to send a JSON response
 const sendJSON = (res, statusCode, data) => {
   res.writeHead(statusCode, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify(data, null, 2));
