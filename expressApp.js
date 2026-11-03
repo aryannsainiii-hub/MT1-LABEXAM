@@ -91,7 +91,6 @@ app.delete('/tasks/:id', (req, res) => {
   res.status(200).json({ message: 'Task deleted successfully', task: deletedTask });
 });
 
-// Handle invalid JSON bodies and other errors
 app.use((err, req, res, next) => {
   if (err.type === 'entity.parse.failed') {
     return res.status(400).json({ message: 'Invalid JSON in request body' });
