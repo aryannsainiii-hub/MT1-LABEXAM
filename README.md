@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MT1-LABEXAM - Employee Task Management
 
 Part A: `httpServer.js` - Node.js HTTP + FS modules (port 3000)
@@ -31,3 +32,6 @@ node expressApp.js      # http://localhost:4000 (use a second terminal)
 | POST | /tasks | Add task |
 | PUT | /tasks/:id | Update task |
 | DELETE | /tasks/:id | Delete task |
+=======
+# MT1-LABEXAM
+>>>>>>> a6a6ad8a326de93309883ac4bd65b13a6ff03273
